@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Extension",
+  "version": "1.0",
+  "description": "Adds a button to reply fields on Twitter.",
+  "permissions": ["scripting","tabs", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["https://*.x.com/*"]
+}
