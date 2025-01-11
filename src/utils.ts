@@ -52,6 +52,7 @@ export const updateReplyTextArea = (tweetText: string) => {
     const replyTextArea = document.querySelectorAll(
         '[data-text="true"], [data-testid="tweetTextarea_0"]'
     )[0];
+
     if (replyTextArea) {
         (replyTextArea as HTMLElement).focus();
         document.execCommand("insertHTML", false, tweetText ? tweetText : "");
