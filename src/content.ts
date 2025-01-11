@@ -9,23 +9,16 @@ const addButton = (toolBar: Element) => {
   if (document.querySelector("#fetch-button") === null) {
     const div = document.createElement("div");
     div.id = "fetch-button";
-    const mainTweetImage = newButtonElement(
+    const fetchButton = newButtonElement(
       "Fetch Tweet Text",
       updateMainTweetText
     );
-    div.append(mainTweetImage);
+    div.append(fetchButton);
     toolBar.parentNode?.append(div);
+    console.log("Button added");
   }
 };
 
 observer('[data-testid="toolBar"]', (toolBar) => {
   addButton(toolBar);
 });
-
-const toolBar = document.querySelector('[data-testid="toolBar"]');
-if (toolBar) {
-  document.addEventListener('DOMContentLoaded', () => {
-    addButton(toolBar);
-  });
-  
-}
