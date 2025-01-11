@@ -21,3 +21,11 @@ const addButton = (toolBar: Element) => {
 observer('[data-testid="toolBar"]', (toolBar) => {
   addButton(toolBar);
 });
+
+const toolBar = document.querySelector('[data-testid="toolBar"]');
+if (toolBar) {
+  document.addEventListener('DOMContentLoaded', () => {
+    addButton(toolBar);
+  });
+  
+}
